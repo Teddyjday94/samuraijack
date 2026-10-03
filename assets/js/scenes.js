@@ -55,13 +55,12 @@ function portal(v, c, w, h, t) {
   for (const g of rings) {
     if (g.r < .6) continue;
     const fog = Math.pow(clamp(g.z / TUBE.N, 0, 1), .7) * (1 - exit * .35);
-    const a0 = twist + g.n * .32, step = Math.PI * 2 / TUBE.M;
-    const L = shade(LIGHT, fog), D = shade(DARK, fog);
-    for (let m = 0; m < TUBE.M; m++) {
-      const a = a0 + m * step;
-      c.fillStyle = (m + g.n) % 2 ? L : D;
-      c.beginPath(); c.moveTo(g.x, g.y); c.arc(g.x, g.y, g.r, a, a + step + .01); c.closePath(); c.fill();
-    }
+    // solid alternating rings: each band of wall is one hoop, black or white
+    c.fillStyle = g.n % 2 ? shade(LIGHT, fog) : shade(DARK, fog);
+    c.beginPath(); c.arc(g.x, g.y, g.r, 0, Math.PI * 2); c.fill();
+    // a thin bright lip on each hoop gives the rings a crisp edge as they rush past
+    c.strokeStyle = `rgba(255,255,255,${(.35 * (1 - fog)).toFixed(3)})`; c.lineWidth = Math.max(.5, g.r * .012);
+    c.beginPath(); c.arc(g.x, g.y, g.r, 0, Math.PI * 2); c.stroke();
   }
   // the far end: a dark throat that becomes the exit light as you near it
   const far = rings[rings.length - 1];
