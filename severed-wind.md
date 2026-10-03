@@ -1,0 +1,13 @@
+# Severed Wind
+
+*An algorithmic philosophy for the blade section of the Samurai Jack fan site.*
+
+Severed Wind holds that stillness and motion are one system seen at two speeds. A single rigid object, the sword, sits at the center of a living field of drifting matter. The sword never chases anything. It only exists, and the field reorganizes itself around that existence. The beauty is in the negotiation between an immovable edge and a wind that cannot stop moving. Every frame is a fresh settlement of that argument, and no two runs settle it the same way.
+
+The wind is a divergence-free flow built from layered, seeded harmonics. These are low-frequency sine sheets rotated against each other so that their curl produces eddies without sources or sinks. Petals advect through the field with slight inertia, as if they have mass, so they lag the current, overshoot it, and spiral as they catch up. The seed fixes every phase and frequency of the field, so a given seed always produces the same weather. Choosing the frequencies is the patient part of the work. They are tuned so that calm pockets and gusting channels share the frame in proportion, the way a master tunes an instrument string by string.
+
+The edge is a boundary condition, not an object. When the blade is drawn, a thin region along its cutting line exerts a shear force: petals that drift into it are split into two diverging streams, one deflected above the spine and one below the edge. Petals that pass too close change state, from blossom to ember, so the drawn sword visibly divides the wind into before and after. Sheathed, the boundary softens and the field closes the wound behind it. This reflects the story the site tells: an edge that separates one era from another.
+
+Time is layered. The field breathes on a slow cycle measured in tens of seconds, gusts arrive on a medium cycle, and each petal tumbles on its own fast spin. Viewer input is just another force, never a command. Dragging turns the blade, and the field responds to the new boundary after a short delay, the way a real wind would. The default seed, 2001, is the year the series premiered. The default count of 620 petals is ten for each of the show's 62 episodes. Neither number is announced on the page.
+
+Restraint is the standard. The palette has three temperatures: blossom pink, sunset amber and Aku's green. The petals stay small, and the blade stays the brightest object on screen. Every constant is the product of slow, iterative refinement until the motion stops reading as simulation and starts reading as weather. The finished system should feel inevitable, as though nothing else could have happened, while still producing something new on every run.

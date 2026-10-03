@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Back to the Past</title>
+<meta name="description" content="An unofficial Samurai Jack fan page: lore, characters, Aku, episode archive and trivia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Shippori+Mincho+B1:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=23">
+</head>
+<body>
+
+<div class="katana" aria-hidden="true"><i></i><b></b></div>
+<nav class="nav" aria-label="Sections">
+  <div class="wrap">
+    <a class="mark" href="#top"><span class="k">侍</span>Back to the Past</a>
+    <ul>
+      <li><a class="l" href="#prologue">Prologue</a></li>
+      <li><a class="l" href="#blade">Sword</a></li>
+      <li><a class="l" href="#timeline">Timeline</a></li>
+      <li><a class="l" href="#cast">Cast</a></li>
+      <li><a class="l" href="#stills">Stills</a></li>
+      <li><a class="l" href="#aku">Aku</a></li>
+      <li><a class="l" href="#archive">Episodes</a></li>
+      <li><a class="l" href="#trial">Trial</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top" aria-label="Samurai Jack fan page">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="letterbox top"></div><div class="letterbox bot"></div>
+  <div class="portrait" id="portrait" role="img" aria-label="Samurai Jack. Move the cursor over him to burn through to Aku underneath.">
+    <canvas id="revealCanvas" aria-hidden="true"></canvas>
+    <div class="plabel" aria-hidden="true"><span id="plJack"><b>サムライ・ジャック</b>Jack</span><span id="plAku"><b>悪</b>Aku</span></div>
+  </div>
+  <div class="hero-copy">
+    <div class="wrap">
+      <span class="eyebrow">An unofficial fan page · 2001 to 2017</span>
+      <h1><span class="row"><span>Samurai</span></span><span class="row"><span>Jack</span></span></h1>
+      <p class="tag">A prince, a sword forged by gods, and a portal that threw him into a future ruled by the evil he swore to destroy.</p>
+      <p class="hint"><span>Brush over Jack to reveal Aku</span><span>Click the sky to draw the blade</span></p>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- PROLOGUE -->
+<section class="prologue" id="prologue">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Prologue · 序</span>
+      <h2>Long ago, in a <span class="brush">distant land</span></h2>
+      <p>Every episode opened the same way: the shapeshifting master of darkness explaining, with enormous self-satisfaction, how he got rid of the one warrior who could stop him. Here is that story in four panels.</p>
+    </div>
+    <div class="panels">
+      <article class="panel reveal tilt" style="--w:7;--c:#313131">
+        <img class="art" src="assets/stills/prologue-1.webp" alt="Aku emerging from a mass of darkness" loading="lazy">
+        <span class="no">I</span>
+        <div class="cap"><b>A darkness falls to Earth</b><span>A shapeless mass of evil, older than empires, takes root and becomes Aku, the Shogun of Sorrow.</span></div>
+      </article>
+      <article class="panel reveal tilt" style="--w:5;--c:#ad130e">
+        <img class="art" src="assets/stills/prologue-2.webp" alt="Aku confronting the Emperor" loading="lazy">
+        <span class="no">II</span>
+        <div class="cap"><b>The eclipse</b><span>Aku breaks free and seizes the Emperor. The young prince is carried away before the palace falls.</span></div>
+      </article>
+      <article class="panel reveal tilt" style="--w:5;--c:#5d5d5d">
+        <img class="art" src="assets/stills/prologue-3.webp" alt="The young prince in training" loading="lazy">
+        <span class="no">III</span>
+        <div class="cap"><b>Years of training</b><span>The prince learns from masters across the world, archers in Sherwood among them, until he is ready to wield his father's sword.</span></div>
+      </article>
+      <article class="panel reveal tilt" style="--w:7;--c:#292929">
+        <img class="art" src="assets/stills/prologue-4.webp" alt="A time portal opening in the sand" loading="lazy">
+        <span class="no">IV</span>
+        <div class="cap"><b>Flung through time</b><span>On the edge of victory, Jack is cast through a portal into a far future where Aku's word is law. Now he seeks the way back.</span></div>
+      </article>
+      <div class="quote reveal">
+        <q>Gotta get back, back to the past.</q>
+        <cite>From the opening theme</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="vista v-portal" id="vista-portal" aria-hidden="false">
+  <div class="vista-pin">
+    <div class="vista-scene" aria-hidden="true"><canvas class="vista-fx"></canvas></div>
+    <div class="vista-copy"><h2 class="portal-title">Into the portal</h2><p>One stroke from victory, Aku tears open time and throws the samurai into a future where his rule is complete.</p></div>
+  </div>
+</div>
+<!-- BLADE -->
+<section class="blade" id="blade">
+  <div class="wrap blade-grid">
+    <div class="blade-text sec-head reveal" style="margin:0">
+      <span class="eyebrow">The sword · 刀</span>
+      <h2>Forged from a <span class="brush">pure heart</span></h2>
+      <p>The one weapon Aku cannot survive. Drag to turn it in the light. Click or tap it to draw the blade, and watch the wind split around the edge.</p>
+      <dl class="parts">
+        <dt>Blade</dt><dd>Curved steel with a frosted, wave-patterned edge line</dd>
+        <dt>Guard</dt><dd>Round iron guard with a gold rim</dd>
+        <dt>Grip</dt><dd>Black cord wrapped over pale ray skin</dd>
+        <dt>Scabbard</dt><dd>Black lacquer</dd>
+      </dl>
+    </div>
+    <div>
+      <div class="blade-stage" id="bladeStage">
+        <div class="kanji-bg" aria-hidden="true">刀</div>
+        <div class="blade-fallback" id="bladeFallback" hidden><p>The 3D sword needs WebGL, which this browser has turned off.</p></div>
+      </div>
+      <div class="blade-ctl" id="bladeCtl">
+        <button class="btn small" id="drawBtn" type="button">Draw the blade</button>
+        <span class="seed">WIND <button class="iconbtn" id="seedPrev" type="button" aria-label="Previous wind">‹</button><b id="seedVal">2001</b><button class="iconbtn" id="seedNext" type="button" aria-label="Next wind">›</button><button class="iconbtn" id="seedRand" type="button" aria-label="Random wind">⟳</button></span>
+        <label for="petalN">Petals <input type="range" id="petalN" min="0" max="1500" step="10" value="620"></label>
+        <label for="windS">Gust <input type="range" id="windS" min="0" max="2" step="0.05" value="1"></label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline" id="timeline">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Chronicle · 年代記</span>
+      <h2>The <span class="brush">long road</span> home</h2>
+      <p>Ten moments from Aku's birth to the last scene of the series. Pick one, or use the arrow keys. The red line marks the portal.</p>
+    </div>
+    <div class="track-scroll">
+      <div class="track" id="track" role="tablist" aria-label="Story timeline"></div>
+    </div>
+    <div class="era-card" id="eraCard">
+      <div class="era-art tilt"><canvas id="eraCanvas" aria-hidden="true"></canvas><div id="eraSlotImg"></div></div>
+      <div class="era-text" role="tabpanel" id="eraPanel" aria-live="polite">
+        <span class="eyebrow" id="eraWhen"></span>
+        <h3 id="eraTitle"></h3>
+        <p id="eraBody"></p>
+        <p class="seen" id="eraSeen"></p>
+        <div class="slot-tools" id="eraSlotTools"></div>
+        <div class="ctl">
+          <button class="btn ghost" id="eraPrev" type="button">← Earlier</button>
+          <button class="btn" id="eraNext" type="button">Later →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="vista v-tree" id="vista-tree" aria-hidden="false">
+  <div class="vista-pin">
+    <div class="vista-scene" aria-hidden="true"><img class="vista-img" src="assets/scenery/tree.webp" alt="" decoding="async"><canvas class="vista-fx"></canvas></div>
+    <div class="vista-copy"><h2>A stranger in his own future</h2><p>Every person he stops to help may cost him a road home. He stops anyway.</p></div>
+  </div>
+</div>
+<!-- CAST -->
+<section class="cast" id="cast">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Dramatis personae · 登場人物</span>
+      <h2>Friends, foes and <span class="brush">one daughter</span></h2>
+      <p>Select a character to open their dossier.</p>
+    </div>
+    <div class="cast-grid">
+      <div>
+        <div class="filters" role="group" aria-label="Filter characters">
+          <button class="chip on" data-f="all" type="button">All</button>
+          <button class="chip" data-f="ally" type="button">Allies</button>
+          <button class="chip" data-f="foe" type="button">Foes</button>
+          <button class="chip" data-f="other" type="button">Neither</button>
+        </div>
+        <div class="roster" id="roster"></div>
+      </div>
+      <article class="dossier tilt" id="dossier" aria-live="polite"></article>
+    </div>
+  </div>
+</section>
+
+<!-- STILLS -->
+<section class="stills" id="stills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Stills · 場面</span>
+      <h2>Frames from <span class="brush">the show</span></h2>
+      <p id="stillsLead">Every frame on this page, floating in one space. Drag to look around, zoom in to get closer, and click a frame to open it full size.</p>
+    </div>
+  </div>
+  <div class="map-stage" id="mapStage" tabindex="0" aria-label="Stills map. Drag or use the arrow keys to look around; plus and minus to zoom.">
+    <div class="map-world" id="mapWorld"></div>
+    <p class="map-hint" id="mapHint" aria-hidden="true">Drag to look around</p>
+  </div>
+  <div class="wrap">
+    <div class="stills-bar" id="stillsBar">
+      <button class="iconbtn" id="mapOut" type="button" aria-label="Zoom out">−</button>
+      <button class="iconbtn" id="mapIn" type="button" aria-label="Zoom in">+</button>
+      <button class="btn small ghost" id="mapReset" type="button">Recenter</button>
+      <span id="stillsCount"></span>
+    </div>
+  </div>
+</section>
+
+<!-- AKU -->
+<section class="aku" id="aku">
+  <div class="wrap aku-grid">
+    <div class="aku-face" id="akuFace" role="button" tabindex="0" aria-label="Provoke Aku">
+      <div class="aku-aura" aria-hidden="true"></div>
+      <div class="aku-figure">
+        <img class="aku-img" src="assets/img/aku.png" alt="Aku, the shapeshifting master of darkness" draggable="false">
+        <i class="aku-glare" aria-hidden="true"></i>
+      </div>
+      <div class="ha" id="ha"></div>
+    </div>    <div class="aku-text">
+      <span class="eyebrow" style="color:var(--aku)">The Shogun of Sorrow · 悪</span>
+      <h2>Aku, <em>master of masters</em></h2>
+      <p>Aku is pure evil with stage presence. He shapeshifts into anything he likes, rules the future through bounty hunters and robot armies, and talks to his own reflection a lot. Voiced by Mako in seasons 1 to 4 and by Greg Baldwin in season 5.</p>
+      <ul class="titles">
+        <li>Master of Masters <small>title</small></li>
+        <li>Deliverer of Darkness <small>title</small></li>
+        <li>Shogun of Sorrow <small>title</small></li>
+      </ul>
+      <div class="speech" id="speech">Click the face. Aku has opinions.<span class="note">Lines below are written for this page in Aku's style, not quoted from the show.</span></div>
+      <div class="shapes" role="group" aria-label="Aku's mood">
+        <button class="btn red" id="provoke" type="button">Provoke Aku</button>
+        <button class="btn ghost" id="calm" type="button">Leave him be</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="vista v-med" id="vista-med" aria-hidden="false">
+  <div class="vista-pin">
+    <div class="vista-scene" aria-hidden="true"><div class="med-world"><canvas class="med-bg"></canvas><div class="med-frame"><img class="vista-img" src="assets/scenery/meditation.webp" alt="" decoding="async"></div><i class="enso"></i></div><canvas class="vista-fx"></canvas></div>
+    <div class="vista-copy"><h2>Stillness first</h2><p>Before the sword comes the breath. Find the calm, then cut.</p></div>
+  </div>
+</div>
+<div class="vista v-valley" id="vista-valley" aria-hidden="false">
+  <div class="vista-pin">
+    <div class="vista-scene" aria-hidden="true"><div class="plane"><img class="vista-img" src="assets/scenery/valley.jpg" alt="" decoding="async"></div><canvas class="vista-fx"></canvas></div>
+    <div class="vista-copy"><h2>Five seasons of road</h2><p>Sixty-two episodes across deserts, neon cities, oceans and valleys like this one.</p></div>
+  </div>
+</div>
+<!-- ARCHIVE -->
+<section class="archive" id="archive">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Archive · 記録</span>
+      <h2>62 episodes, <span class="brush">five seasons</span></h2>
+      <p>Episodes are numbered in Roman numerals. Seasons 1 to 4 aired on Cartoon Network from August 2001 to September 2004. Season 5 aired on Adult Swim's Toonami block from March to May 2017, and its numbering jumps ahead to XCII to account for the fifty lost years.</p>
+    </div>
+    <div class="seasons" id="seasons" role="tablist" aria-label="Seasons"></div>
+    <div class="ep-body" id="epBody"></div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="trial" id="trial">
+  <div class="wrap quiz">
+    <div class="sec-head reveal" style="margin:0">
+      <span class="eyebrow">The trial · 試練</span>
+      <h2>Prove you were <span class="brush" style="--x:0">paying attention</span></h2>
+      <p style="color:#4a4644">Ten questions about the show and the people who made it. Your rank comes at the end.</p>
+    </div>
+    <div class="qcard tilt" id="qcard" aria-live="polite"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="end">終 · The end, and a ladybug.</p>
+    <p>An unofficial fan page. <i>Samurai Jack</i> was created by Genndy Tartakovsky for Cartoon Network. Characters, names and screenshots belong to Cartoon Network and Adult Swim. Stills are sourced from the <a href="https://samuraijack.fandom.com/" target="_blank" rel="noopener">Samurai Jack Wiki</a> and used here for non-commercial fan purposes.</p>
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Samurai_Jack" target="_blank" rel="noopener">Samurai Jack on Wikipedia</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Samurai_Jack_season_5" target="_blank" rel="noopener">Season 5 on Wikipedia</a></li>
+      <li><a href="https://cartoon-network-classic.fandom.com/wiki/Samurai_Jack/Episodes" target="_blank" rel="noopener">Episode list, Cartoon Network Classic wiki</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="assets/vendor/three.min.js"></script>
+<script src="assets/js/stills.js?v=23"></script>
+<script src="assets/js/main.js?v=23"></script>
+<script src="assets/js/scenes.js?v=23"></script>
+</body>
+</html>
