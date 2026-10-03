@@ -51,7 +51,11 @@ function portal(v, c, w, h, t) {
     const [px, py] = tubePath(n);
     rings.push({ n, z, x: cx + (px - ox) * F / z, y: cy + (py - oy) * F / z, r: TUBE.R * F / z });
   }
-  // near rings first (largest), far rings drawn on top: each visible band is the tube wall between two rings
+  // near rings first (largest), far rings drawn on top: each visible band is the tube wall between two rings.
+  // Where the tunnel bends, a far ring sits off-centre and would spill past the nearer walls, so every ring
+  // is clipped to the opening of the ring in front of it (clips stack, so it stays inside every opening).
+  c.save();
+  let farOpening = null;
   for (const g of rings) {
     if (g.r < .6) continue;
     const fog = Math.pow(clamp(g.z / TUBE.N, 0, 1), .7) * (1 - exit * .35);
@@ -61,14 +65,25 @@ function portal(v, c, w, h, t) {
     // a thin bright lip on each hoop gives the rings a crisp edge as they rush past
     c.strokeStyle = `rgba(255,255,255,${(.35 * (1 - fog)).toFixed(3)})`; c.lineWidth = Math.max(.5, g.r * .012);
     c.beginPath(); c.arc(g.x, g.y, g.r, 0, Math.PI * 2); c.stroke();
+    // everything farther in can only be seen through this ring's opening
+    c.beginPath(); c.arc(g.x, g.y, g.r, 0, Math.PI * 2); c.clip();
+    farOpening = g;
   }
-  // the far end: a dark throat that becomes the exit light as you near it
-  const far = rings[rings.length - 1];
+  // the far end: a dark throat that becomes the exit light as you near it (still inside the clip)
+  const far = farOpening;
   if (far) {
     const rr = Math.max(far.r * 1.2, 6) * (1 + exit * exit * 14);
     const g = c.createRadialGradient(far.x, far.y, 0, far.x, far.y, rr);
     g.addColorStop(0, `rgba(255,255,255,${.25 + exit * .75})`); g.addColorStop(.5, `rgba(240,238,235,${exit * .7})`); g.addColorStop(1, 'rgba(240,238,235,0)');
     c.fillStyle = g; c.beginPath(); c.arc(far.x, far.y, rr, 0, Math.PI * 2); c.fill();
+  }
+  c.restore();
+  // as you reach the exit, its light floods past the walls too
+  if (far && exit > .5) {
+    const k = (exit - .5) / .5, rr = Math.hypot(w, h) * k;
+    const g = c.createRadialGradient(far.x, far.y, 0, far.x, far.y, Math.max(1, rr));
+    g.addColorStop(0, `rgba(250,248,245,${.9 * k})`); g.addColorStop(1, 'rgba(250,248,245,0)');
+    c.fillStyle = g; c.fillRect(0, 0, w, h);
   }
   // streaks of light rushing past along the walls
   if (!v.streaks) v.streaks = Array.from({ length: 70 }, () => ({ a: rand(0, 6.3), d: rand(.6, .95), z: rand(.5, TUBE.N) }));
