@@ -523,3 +523,8 @@ footer p a { color: var(--paper); text-underline-offset: 3px; }
 .map-hint { position: absolute; z-index: 2; left: 50%; bottom: 16px; translate: -50% 0; margin: 0; padding: 7px 14px; font-family: var(--future); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: rgba(245,243,240,.8); background: rgba(10,10,10,.6); pointer-events: none; transition: opacity .5s; }
 .map-stage.touched .map-hint { opacity: 0; }
 @media (max-width: 760px) { .map-stage { height: 64vh; perspective: 700px; } }
+
+/* ---------- phones: finger drags on the interactive pieces belong to them, not to page scrolling ---------- */
+.portrait, .blade-stage, .map-stage { touch-action: none; overscroll-behavior: contain; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+.portrait canvas, .blade-stage canvas, .map-stage img { -webkit-touch-callout: none; -webkit-user-drag: none; }
+@media (max-width: 760px) { .map-stage { height: 56vh; } }
